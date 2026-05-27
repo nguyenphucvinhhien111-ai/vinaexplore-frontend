@@ -110,8 +110,9 @@ export default function RegisterPage() {
               <button
                 type="button"
                 onClick={() => {
-                  window.location.href =
-                    "http://localhost:8080/oauth2/authorization/google";
+                  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
+                  const baseUrl = apiUrl.replace(/\/api$/, "");
+                  window.location.href = `${baseUrl}/oauth2/authorization/google`;
                 }}
                 className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-surface border border-outline-variant/30 hover:bg-surface-variant transition-colors text-on-surface font-body text-sm font-medium cursor-pointer"
               >

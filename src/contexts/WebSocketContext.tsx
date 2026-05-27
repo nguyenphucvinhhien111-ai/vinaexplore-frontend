@@ -26,10 +26,21 @@ export const WebSocketProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       return;
     }
 
-    const socket = new SockJS("http://localhost:8080/ws");
+    const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
+    let wsUrl = "";
+
+    if (apiUrl.includes("localhost")) {
+      wsUrl = "http://localhost:8080/ws";
+    } else {
+      wsUrl = apiUrl.replace(/\/api$/, "") + "/ws";
+    }
+
+    const socket = new SockJS(wsUrl);
     const client = new Client({
       webSocketFactory: () => socket,
-      debug: () => {},
+      debug: (str) => {
+        console.log("STOMP: " + str);
+      },
       reconnectDelay: 5000,
       onConnect: () => {
         client.subscribe(`/user/${user.username}/queue/notifications`, (message) => {

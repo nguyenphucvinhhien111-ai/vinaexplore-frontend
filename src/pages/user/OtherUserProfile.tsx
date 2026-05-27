@@ -92,11 +92,10 @@ const OtherUserProfile: React.FC = () => {
         if (user) {
           setTargetUser(user);
 
-          const [followers, following, myLocations, checkinHistory] = await Promise.all([
+          const [followers, following, myLocations] = await Promise.all([
             userApi.getFollowers(user.id).catch(() => []),
             userApi.getFollowing(user.id).catch(() => []),
             locationApi.getByUserId(user.id).catch(() => []),
-            interactApi.getCheckinHistory().catch(() => []),
           ]);
 
           setFollowersCount(followers.length);

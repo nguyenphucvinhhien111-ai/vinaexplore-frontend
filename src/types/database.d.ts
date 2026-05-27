@@ -96,3 +96,6 @@ export interface Notification {
   createdAt: string;
   sender?: User;
 }
+
+export type Location = LocationEntity;
+

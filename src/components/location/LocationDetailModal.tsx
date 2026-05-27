@@ -53,9 +53,6 @@ export default function LocationDetailModal({
     isOpen: false,
     reviewId: null,
   });
-
-  const [isDetailUpdated, setIsDetailUpdated] = useState(false); // Helper state to trigger re-renders if needed
-
   const storeUserId = useAuthStore((state) => state.user?.id);
   const activeUserId = currentUserId || storeUserId;
 

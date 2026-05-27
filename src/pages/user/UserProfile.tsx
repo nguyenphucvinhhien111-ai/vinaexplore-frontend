@@ -71,7 +71,7 @@ const UserProfile: React.FC = () => {
     const handleStatsUpdate = (e: any) => {
       const data = e.detail;
       // Nếu là sự kiện refresh stats của chính mình
-      if (data?.action === "REFRESH_FOLLOWERS" && data?.userId === currentUser?.id) {
+      if (currentUser && data?.action === "REFRESH_FOLLOWERS" && data?.userId === currentUser.id) {
         userApi.getFollowers(currentUser.id).then((followers) => {
           setFollowersCount(followers.length);
         }).catch(console.error);
@@ -187,7 +187,7 @@ const UserProfile: React.FC = () => {
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
-  const onCropComplete = (croppedArea: any, croppedAreaPixels: any) => {
+  const onCropComplete = (_croppedArea: any, croppedAreaPixels: any) => {
     setCroppedAreaPixels(croppedAreaPixels);
   };
 

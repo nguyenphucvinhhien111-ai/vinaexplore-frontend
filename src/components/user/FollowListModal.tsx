@@ -1,4 +1,3 @@
-import React from "react";
 import { createPortal } from "react-dom";
 import { X, User as UserIcon } from "lucide-react";
 import { Link } from "react-router-dom";

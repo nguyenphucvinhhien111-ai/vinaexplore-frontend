@@ -149,11 +149,11 @@ export default function LoginPage() {
               nhất tại Việt Nam.
             </p>
           </div>
-        </div>
         <div className="flex items-center justify-center p-6 sm:p-12 bg-background relative z-10 w-full">
-          <div className="w-full max-w-md min-w-[320px] sm:min-w-[400px] shrink-0 flex flex-col gap-8 mx-auto">
+          <div className="w-full max-w-md min-w-[320px] sm:min-w-[400px] shrink-0 flex flex-col gap-6 mx-auto">
             <div className="flex flex-col gap-2 text-center lg:text-left block w-full">
               <h1 className="text-3xl font-headline font-bold text-on-background whitespace-nowrap">
+                Chào mừng trở lại
               </h1>
               <p className="text-on-surface-variant font-body text-sm">
                 Đăng nhập để tiếp tục hành trình của bạn

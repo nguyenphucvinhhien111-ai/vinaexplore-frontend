@@ -223,7 +223,7 @@ const UserSidebar: React.FC<UserSidebarProps> = ({ user: initialUser }) => {
 
   return (
     <>
-      <aside className="w-80 flex flex-col gap-6 sticky top-24 h-fit font-body">
+      <aside className="w-full flex flex-col gap-6 sticky top-24 h-fit font-body">
         <div className="flex flex-col p-6 gap-2 border-l border-outline-variant/10 bg-surface-container-low rounded-2xl shadow-xl block">
           <Link
             to="/profile"

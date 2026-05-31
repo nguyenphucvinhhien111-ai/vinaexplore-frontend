@@ -127,7 +127,7 @@ export default function UserFeed() {
       <div className="flex-1 w-full max-w-4xl h-full overflow-y-auto pb-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         <div className="pt-0">
           {isLoading ? (
-            <div className="flex flex-col justify-center items-start min-h-[300px] gap-4">
+            <div className="flex flex-col justify-center items-center min-h-[300px] gap-4">
               <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary"></div>
               <p className="text-on-surface-variant font-body text-sm animate-pulse">
                 Đang tải bảng tin...

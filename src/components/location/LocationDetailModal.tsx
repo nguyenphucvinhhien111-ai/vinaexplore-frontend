@@ -350,7 +350,7 @@ export default function LocationDetailModal({
                 ) : reviews.length > 0 ? (
                   reviews.map((review) => (
                     <div key={review.id} className="bg-surface-container-low p-5 rounded-2xl border border-outline-variant/20">
-                      <div className="flex items-start justify-between">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 sm:gap-2 mb-3 sm:mb-0">
                         <div className="flex items-center gap-3">
                           <img src={review.creatorAvatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(review.creatorFullName || review.creatorUsername)}`} className="w-10 h-10 rounded-full object-cover" alt="avatar" />
                           <div>

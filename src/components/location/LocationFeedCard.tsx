@@ -516,7 +516,7 @@ const LocationFeedCard: React.FC<LocationFeedCardProps> = ({
                     key={review.id}
                     className="bg-surface p-3 rounded-xl border border-outline-variant/10 shadow-sm"
                   >
-                    <div className="flex items-center justify-between mb-1">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 mb-2 sm:mb-1">
                       <div className="flex items-center gap-2">
                         <a
                           href={`/profile/${review.creatorId}`}

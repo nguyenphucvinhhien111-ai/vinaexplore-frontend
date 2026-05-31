@@ -39,7 +39,7 @@ export default function LoginPage() {
 
   const handleForgotPasswordSubmit = async (email: string) => {
     try {
-      await authApi.forgotPassword({ email }); 
+      await authApi.forgotPassword({ email });
 
       setResetEmail(email);
       setIsForgotModalOpen(false);
@@ -149,6 +149,7 @@ export default function LoginPage() {
               nhất tại Việt Nam.
             </p>
           </div>
+        </div>
         <div className="flex items-start justify-center pt-16 pb-12 sm:pt-20 px-6 sm:px-12 bg-background relative z-10 w-full overflow-y-auto">
           <div className="w-full max-w-md min-w-[320px] sm:min-w-[400px] shrink-0 flex flex-col gap-6 mx-auto">
             <div className="flex flex-col gap-2 text-center lg:text-left block w-full">
@@ -283,7 +284,8 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => {
-                  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
+                  const apiUrl =
+                    import.meta.env.VITE_API_URL || "http://localhost:8080/api";
                   const baseUrl = apiUrl.replace(/\/api$/, "");
                   window.location.href = `${baseUrl}/oauth2/authorization/google`;
                 }}

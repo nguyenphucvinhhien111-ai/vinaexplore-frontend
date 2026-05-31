@@ -86,7 +86,7 @@ export default function NotificationBell() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-surface border border-outline-variant/30 rounded-xl shadow-xl z-50 overflow-hidden flex flex-col max-h-[80vh]">
+        <div className="fixed top-[70px] left-4 right-4 sm:absolute sm:top-auto sm:right-0 sm:left-auto mt-2 sm:w-96 bg-surface border border-outline-variant/30 rounded-xl shadow-xl z-50 overflow-hidden flex flex-col max-h-[80vh]">
           <div className="p-4 border-b border-outline-variant/20 flex justify-between items-center bg-surface-container-low">
             <h3 className="font-bold text-on-surface">Thông báo</h3>
             {unreadCount > 0 && (

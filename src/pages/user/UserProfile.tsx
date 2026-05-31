@@ -362,8 +362,8 @@ const UserProfile: React.FC = () => {
                     </button>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-2 justify-center md:justify-start w-full">
-                    <h3 className="font-headline-md text-3xl md:text-3xl font-bold text-on-surface text-center md:text-left">
+                  <div className="flex items-center gap-2 justify-center md:justify-start w-full flex-wrap">
+                    <h3 className="font-headline-md text-2xl sm:text-3xl font-bold text-on-surface text-center md:text-left break-words max-w-[calc(100%-48px)]">
                       {displayName}
                     </h3>
                     <button
@@ -371,7 +371,7 @@ const UserProfile: React.FC = () => {
                         setEditNameValue(displayName); 
                         setIsEditingName(true); 
                       }}
-                      className="p-2 rounded-full text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors flex items-center justify-center"
+                      className="p-2 rounded-full text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors flex items-center justify-center shrink-0"
                       title="Chỉnh sửa tên"
                     >
                       <span className="material-symbols-outlined text-[20px]">

@@ -233,7 +233,7 @@ const OtherUserProfile: React.FC = () => {
 
             <div className="flex-1 min-w-0 text-center md:text-left w-full">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                <h3 className="font-headline-md text-3xl font-bold text-on-surface">
+                <h3 className="font-headline-md text-2xl sm:text-3xl font-bold text-on-surface break-words">
                   {displayName}
                 </h3>
 

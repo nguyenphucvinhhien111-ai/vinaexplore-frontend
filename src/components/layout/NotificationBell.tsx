@@ -61,9 +61,7 @@ export default function NotificationBell() {
   };
 
   const formatTime = (dateString: string) => {
-    // Đảm bảo UTC time được convert đúng sang local time
-    const utcDateString = dateString.endsWith("Z") ? dateString : `${dateString}Z`;
-    const date = new Date(utcDateString);
+    const date = new Date(dateString);
     return date.toLocaleString("vi-VN", {
       hour: "2-digit",
       minute: "2-digit",

@@ -94,7 +94,7 @@ export default function RegisterPage() {
             </p>
           </div>
         </div>
-        <div className="flex items-start justify-center pt-[10vh] pb-12 sm:pt-[15vh] px-6 sm:px-12 bg-background relative z-10 w-full">
+        <div className="flex items-start justify-center pt-16 pb-12 sm:pt-20 px-6 sm:px-12 bg-background relative z-10 w-full overflow-y-auto">
           <div className="w-full max-w-md min-w-[320px] sm:min-w-[400px] shrink-0 flex flex-col gap-6 mx-auto">
             <div className="flex flex-col gap-2 text-center lg:text-left block w-full">
               <h1 className="text-3xl font-headline font-bold text-on-background whitespace-nowrap">
